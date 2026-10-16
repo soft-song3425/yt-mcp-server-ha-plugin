@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "problems": [],
+ "version": "2.11.0",
+ "checked_at": "2026-10-16T15:30:00+00:00",
+ "google_token_usable": true,
+ "poller": {
+  "last_run_min_ago": 7,
+  "current_interval_min": 15,
+  "in_busy_hours": true,
+  "last_result": "ok"
+ },
+ "playlists": {
+  "New Videos": {
+   "items": 8,
+   "age_min": 7
+  },
+  "Long Watches": {
+   "items": 1,
+   "age_min": 7
+  }
+ },
+ "backup_age_h": 5.2,
+ "quota": {
+  "spent": 1240,
+  "budget": 9000,
+  "pct": 14,
+  "google_reported_exhausted": false
+ },
+ "metadata_pending": 0
+}

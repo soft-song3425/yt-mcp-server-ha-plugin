@@ -1,0 +1,323 @@
+{
+ "schema": 1,
+ "version": "2.11.0",
+ "generated_at": "2026-10-16T15:23:16+00:00",
+ "timezone": "Europe/Zurich",
+ "history_days": 20,
+ "today": {
+  "watched": 1,
+  "watched_hours": 0.1,
+  "added": 0,
+  "dropped": 0,
+  "net": -1
+ },
+ "week": {
+  "watched": 4,
+  "watched_hours": 0.5,
+  "added": 2,
+  "dropped": 0,
+  "net": -2,
+  "watched_change_pct": null,
+  "added_change_pct": null,
+  "previous": {
+   "watched": 0,
+   "watched_hours": 0.0,
+   "added": 0,
+   "dropped": 0,
+   "net": 0
+  }
+ },
+ "month": {
+  "watched": 4,
+  "watched_hours": 0.5,
+  "added": 2,
+  "net": -2,
+  "watched_per_day": 0.2,
+  "added_per_day": 0.1,
+  "median_wait_days": null
+ },
+ "backlog": {
+  "items": 9,
+  "hours": 5.2,
+  "days_to_empty": 90.0
+ },
+ "playlists": [
+  {
+   "id": "PLnew",
+   "name": "New Videos",
+   "key": "new_videos",
+   "items": 8,
+   "hours": 2.2,
+   "avg_minutes": 16,
+   "watched_today": 1,
+   "added_today": 0,
+   "watched_7d": 4,
+   "added_7d": 2,
+   "net_7d": -2,
+   "watched_30d": 4,
+   "added_30d": 2,
+   "watched_per_day_30d": 0.2,
+   "median_wait_days_30d": null,
+   "net_per_day_14d": -0.14,
+   "days_to_empty": 56,
+   "top_themes": [
+    {
+     "theme": "Unclassified",
+     "items": 6
+    },
+    {
+     "theme": "World Politics",
+     "items": 2
+    }
+   ]
+  },
+  {
+   "id": "PLlong",
+   "name": "Long Watches",
+   "key": "long_watches",
+   "items": 1,
+   "hours": 3.0,
+   "avg_minutes": 180,
+   "watched_today": 0,
+   "added_today": 0,
+   "watched_7d": 0,
+   "added_7d": 1,
+   "net_7d": 1,
+   "watched_30d": 0,
+   "added_30d": 1,
+   "watched_per_day_30d": 0.0,
+   "median_wait_days_30d": null,
+   "net_per_day_14d": 0.07,
+   "days_to_empty": null,
+   "top_themes": [
+    {
+     "theme": "World Politics",
+     "items": 1
+    }
+   ]
+  }
+ ],
+ "themes": [
+  {
+   "theme": "World Politics",
+   "position": 1,
+   "items": 3,
+   "hours": 3.3,
+   "status": "shrinking",
+   "watched_per_week": 1.4,
+   "weeks_to_clear": 2.1,
+   "median_age_days": 45.6,
+   "net_14d": -2
+  },
+  {
+   "theme": "Economy & Money",
+   "position": 2,
+   "items": 0,
+   "hours": 0.0,
+   "status": "empty",
+   "watched_per_week": 0.0,
+   "weeks_to_clear": null,
+   "median_age_days": null,
+   "net_14d": 0
+  },
+  {
+   "theme": "Hacking/Security",
+   "position": 3,
+   "items": 0,
+   "hours": 0.0,
+   "status": "empty",
+   "watched_per_week": 0.0,
+   "weeks_to_clear": null,
+   "median_age_days": null,
+   "net_14d": 0
+  },
+  {
+   "theme": "Tech",
+   "position": 4,
+   "items": 0,
+   "hours": 0.0,
+   "status": "empty",
+   "watched_per_week": 0.0,
+   "weeks_to_clear": null,
+   "median_age_days": null,
+   "net_14d": 0
+  },
+  {
+   "theme": "Science",
+   "position": 5,
+   "items": 0,
+   "hours": 0.0,
+   "status": "empty",
+   "watched_per_week": 0.0,
+   "weeks_to_clear": null,
+   "median_age_days": null,
+   "net_14d": 0
+  },
+  {
+   "theme": "Infrastructure & Urbanism",
+   "position": 6,
+   "items": 0,
+   "hours": 0.0,
+   "status": "empty",
+   "watched_per_week": 0.0,
+   "weeks_to_clear": null,
+   "median_age_days": null,
+   "net_14d": 0
+  },
+  {
+   "theme": "Travel",
+   "position": 7,
+   "items": 0,
+   "hours": 0.0,
+   "status": "empty",
+   "watched_per_week": 0.0,
+   "weeks_to_clear": null,
+   "median_age_days": null,
+   "net_14d": 0
+  },
+  {
+   "theme": "Aviation",
+   "position": 8,
+   "items": 0,
+   "hours": 0.0,
+   "status": "empty",
+   "watched_per_week": 0.0,
+   "weeks_to_clear": null,
+   "median_age_days": null,
+   "net_14d": 0
+  },
+  {
+   "theme": "Cars & Repair",
+   "position": 9,
+   "items": 0,
+   "hours": 0.0,
+   "status": "empty",
+   "watched_per_week": 0.0,
+   "weeks_to_clear": null,
+   "median_age_days": null,
+   "net_14d": 0
+  },
+  {
+   "theme": "German Language",
+   "position": 10,
+   "items": 0,
+   "hours": 0.0,
+   "status": "empty",
+   "watched_per_week": 0.0,
+   "weeks_to_clear": null,
+   "median_age_days": null,
+   "net_14d": 0
+  },
+  {
+   "theme": "Everything Else",
+   "position": 11,
+   "items": 0,
+   "hours": 0.0,
+   "status": "empty",
+   "watched_per_week": 0.0,
+   "weeks_to_clear": null,
+   "median_age_days": null,
+   "net_14d": 0
+  },
+  {
+   "theme": "Food",
+   "position": 12,
+   "items": 0,
+   "hours": 0.0,
+   "status": "empty",
+   "watched_per_week": 0.0,
+   "weeks_to_clear": null,
+   "median_age_days": null,
+   "net_14d": 0
+  },
+  {
+   "theme": "Music",
+   "position": 13,
+   "items": 0,
+   "hours": 0.0,
+   "status": "empty",
+   "watched_per_week": 0.0,
+   "weeks_to_clear": null,
+   "median_age_days": null,
+   "net_14d": 0
+  },
+  {
+   "theme": "Gaming",
+   "position": 14,
+   "items": 0,
+   "hours": 0.0,
+   "status": "empty",
+   "watched_per_week": 0.0,
+   "weeks_to_clear": null,
+   "median_age_days": null,
+   "net_14d": 0
+  },
+  {
+   "theme": "Unclassified",
+   "position": null,
+   "items": 6,
+   "hours": 1.8,
+   "status": "stalled",
+   "watched_per_week": 0.0,
+   "weeks_to_clear": null,
+   "median_age_days": 45.6,
+   "net_14d": 0
+  }
+ ],
+ "most_watched_themes_7d": [
+  {
+   "theme": "World Politics",
+   "watched": 4
+  }
+ ],
+ "stalled_themes_14d": [
+  "Unclassified"
+ ],
+ "last_watched": {
+  "title": "War update",
+  "channel": "DW News",
+  "playlist": "New Videos",
+  "theme": "World Politics",
+  "minutes": 8,
+  "at": "2026-10-16T15:18:16+00:00"
+ },
+ "stalest": [
+  {
+   "title": "3h documentary",
+   "channel": "DW News",
+   "playlist": "Long Watches",
+   "days_waiting": 46
+  },
+  {
+   "title": "Pasta",
+   "channel": "Kenji",
+   "playlist": "New Videos",
+   "days_waiting": 46
+  },
+  {
+   "title": "New GPU",
+   "channel": "Linus Tech Tips",
+   "playlist": "New Videos",
+   "days_waiting": 46
+  }
+ ],
+ "attention": [
+  "Nothing watched in 14 days from: Unclassified.",
+  "No database backup found."
+ ],
+ "positioning_review_due": false,
+ "quota": {
+  "spent": 5,
+  "remaining": 8995,
+  "budget": 9000,
+  "pct": 0,
+  "google_reported_exhausted": false,
+  "resets_at": "2026-10-17T07:00:00+00:00",
+  "history": [
+   {
+    "day": "2026-10-16",
+    "units": 5
+   }
+  ]
+ }
+}

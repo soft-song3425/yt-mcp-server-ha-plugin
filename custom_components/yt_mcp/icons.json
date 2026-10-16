@@ -1,0 +1,44 @@
+{
+  "entity": {
+    "binary_sensor": {
+      "google_token": { "default": "mdi:google" },
+      "quota_exhausted": { "default": "mdi:gauge-full" },
+      "positioning_review_due": { "default": "mdi:sort", "state": { "on": "mdi:sort-variant-lock-open" } }
+    },
+    "sensor": {
+      "last_poll": { "default": "mdi:cloud-sync" },
+      "poll_interval": { "default": "mdi:timer-sync-outline" },
+      "backup_age": { "default": "mdi:database-clock" },
+      "quota_used": { "default": "mdi:gauge" },
+      "quota_used_pct": { "default": "mdi:gauge" },
+      "metadata_pending": { "default": "mdi:tag-off-outline" },
+      "watched_today": { "default": "mdi:play-circle-outline" },
+      "added_today": { "default": "mdi:playlist-plus" },
+      "watched_hours_today": { "default": "mdi:clock-outline" },
+      "watched_7d": { "default": "mdi:play-circle" },
+      "added_7d": { "default": "mdi:playlist-plus" },
+      "watched_hours_7d": { "default": "mdi:clock" },
+      "watched_change_7d": { "default": "mdi:trending-up" },
+      "watched_30d": { "default": "mdi:calendar-month" },
+      "watched_per_day": { "default": "mdi:speedometer" },
+      "median_wait": { "default": "mdi:timer-sand" },
+      "backlog_items": { "default": "mdi:playlist-play" },
+      "backlog_hours": { "default": "mdi:clock-time-eight-outline" },
+      "days_to_empty": { "default": "mdi:calendar-check" },
+      "last_watched": { "default": "mdi:youtube" },
+      "last_watched_at": { "default": "mdi:history" },
+      "stalest_wait": { "default": "mdi:sleep" },
+      "most_watched_theme": { "default": "mdi:star-outline" },
+      "stalled_themes": { "default": "mdi:pause-circle-outline" },
+      "attention": { "default": "mdi:alert-circle-outline" },
+      "quota_remaining": { "default": "mdi:gauge-low" },
+      "quota_reset": { "default": "mdi:restore-clock" },
+      "playlist_items": { "default": "mdi:playlist-play" },
+      "playlist_hours": { "default": "mdi:clock-time-eight-outline" },
+      "playlist_watched_today": { "default": "mdi:play-circle-outline" },
+      "playlist_watched_7d": { "default": "mdi:play-circle" },
+      "playlist_days_to_empty": { "default": "mdi:calendar-check" },
+      "theme_items": { "default": "mdi:shape-outline" }
+    }
+  }
+}

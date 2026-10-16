@@ -1,0 +1,13 @@
+{
+  "domain": "yt_mcp",
+  "name": "yt-mcp",
+  "codeowners": ["@soft-song3425"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/soft-song3425/yt-mcp-server-ha-plugin",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/soft-song3425/yt-mcp-server-ha-plugin/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}
