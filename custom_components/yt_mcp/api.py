@@ -26,7 +26,16 @@ class YtMcpConnectionError(YtMcpError):
 
 
 class YtMcpAuthError(YtMcpError):
-    """The token was refused (401/403)."""
+    """The token was refused (401)."""
+
+
+class YtMcpForbiddenError(YtMcpConnectionError):
+    """403: the server's edge gate refused the connection itself, before any token check.
+
+    yt-mcp answers a wrong token with 401. A 403 means the request did not arrive from an
+    address in YT_MCP_PROXY_CIDRS (for example the NetBird proxy's address changed), so it is
+    a connection problem, not a reason to ask for a new token.
+    """
 
 
 class YtMcpNotSupportedError(YtMcpError):
@@ -66,8 +75,13 @@ class YtMcpClient:
                     allow_redirects=False,
                 )
                 async with resp:
-                    if resp.status in (401, 403):
-                        raise YtMcpAuthError(f"token refused by {path} (HTTP {resp.status})")
+                    if resp.status == 401:
+                        raise YtMcpAuthError(f"token refused by {path} (HTTP 401)")
+                    if resp.status == 403:
+                        raise YtMcpForbiddenError(
+                            f"{path} refused the connection (HTTP 403): the request did not reach the "
+                            "server through a trusted proxy (YT_MCP_PROXY_CIDRS); the token was not checked"
+                        )
                     if resp.status == 404:
                         raise YtMcpNotSupportedError(f"{path} not found: server too old or wrong URL")
                     if resp.status != 200:

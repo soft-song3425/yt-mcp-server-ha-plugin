@@ -32,9 +32,10 @@
     },
     "error": {
       "cannot_connect": "Could not reach the server, or it did not answer like yt-mcp.",
-      "invalid_auth": "The server refused the token.",
+      "invalid_auth": "The server refused the token (HTTP 401).",
       "not_supported": "No /admin/status.json at this URL: check the URL, or upgrade the server to 2.10.0 or newer.",
-      "unknown": "Unexpected error, see the log."
+      "unknown": "Unexpected error, see the log.",
+      "forbidden": "The server refused the connection itself (HTTP 403) before checking the token: the request did not come through a trusted proxy. Check YT_MCP_PROXY_CIDRS on the server against the NetBird proxy address; `docker compose logs` shows the refused address as edge_refused."
     },
     "abort": {
       "already_configured": "This server is already configured.",
@@ -65,45 +66,119 @@
   },
   "entity": {
     "binary_sensor": {
-      "problem": { "name": "Problem" },
-      "google_token": { "name": "Google authorisation" },
-      "quota_exhausted": { "name": "Quota exhausted" },
-      "positioning_review_due": { "name": "Positioning review due" }
+      "problem": {
+        "name": "Problem"
+      },
+      "google_token": {
+        "name": "Google authorisation"
+      },
+      "quota_exhausted": {
+        "name": "Quota exhausted"
+      },
+      "positioning_review_due": {
+        "name": "Positioning review due"
+      }
     },
     "sensor": {
-      "last_poll": { "name": "Last poll" },
-      "poll_interval": { "name": "Poll interval" },
-      "backup_age": { "name": "Backup age" },
-      "quota_used": { "name": "Quota used" },
-      "quota_used_pct": { "name": "Quota used percentage" },
-      "metadata_pending": { "name": "Videos without metadata" },
-      "watched_today": { "name": "Watched today" },
-      "added_today": { "name": "Added today" },
-      "watched_hours_today": { "name": "Watch time today" },
-      "watched_7d": { "name": "Watched this week" },
-      "added_7d": { "name": "Added this week" },
-      "watched_hours_7d": { "name": "Watch time this week" },
-      "watched_change_7d": { "name": "Watched vs previous week" },
-      "watched_30d": { "name": "Watched in 30 days" },
-      "watched_per_day": { "name": "Watched per day" },
-      "median_wait": { "name": "Median wait before watching" },
-      "backlog_items": { "name": "Backlog" },
-      "backlog_hours": { "name": "Backlog hours" },
-      "days_to_empty": { "name": "Days to empty" },
-      "last_watched": { "name": "Last watched" },
-      "last_watched_at": { "name": "Last watched at" },
-      "stalest_wait": { "name": "Longest wait" },
-      "most_watched_theme": { "name": "Most watched theme" },
-      "stalled_themes": { "name": "Stalled themes" },
-      "attention": { "name": "Attention items" },
-      "quota_remaining": { "name": "Quota remaining" },
-      "quota_reset": { "name": "Quota reset" },
-      "playlist_items": { "name": "{playlist} backlog" },
-      "playlist_hours": { "name": "{playlist} backlog hours" },
-      "playlist_watched_today": { "name": "{playlist} watched today" },
-      "playlist_watched_7d": { "name": "{playlist} watched this week" },
-      "playlist_days_to_empty": { "name": "{playlist} days to empty" },
-      "theme_items": { "name": "{theme} backlog" }
+      "last_poll": {
+        "name": "Last poll"
+      },
+      "poll_interval": {
+        "name": "Poll interval"
+      },
+      "backup_age": {
+        "name": "Backup age"
+      },
+      "quota_used": {
+        "name": "Quota used"
+      },
+      "quota_used_pct": {
+        "name": "Quota used percentage"
+      },
+      "metadata_pending": {
+        "name": "Videos without metadata"
+      },
+      "watched_today": {
+        "name": "Watched today"
+      },
+      "added_today": {
+        "name": "Added today"
+      },
+      "watched_hours_today": {
+        "name": "Watch time today"
+      },
+      "watched_7d": {
+        "name": "Watched this week"
+      },
+      "added_7d": {
+        "name": "Added this week"
+      },
+      "watched_hours_7d": {
+        "name": "Watch time this week"
+      },
+      "watched_change_7d": {
+        "name": "Watched vs previous week"
+      },
+      "watched_30d": {
+        "name": "Watched in 30 days"
+      },
+      "watched_per_day": {
+        "name": "Watched per day"
+      },
+      "median_wait": {
+        "name": "Median wait before watching"
+      },
+      "backlog_items": {
+        "name": "Backlog"
+      },
+      "backlog_hours": {
+        "name": "Backlog hours"
+      },
+      "days_to_empty": {
+        "name": "Days to empty"
+      },
+      "last_watched": {
+        "name": "Last watched"
+      },
+      "last_watched_at": {
+        "name": "Last watched at"
+      },
+      "stalest_wait": {
+        "name": "Longest wait"
+      },
+      "most_watched_theme": {
+        "name": "Most watched theme"
+      },
+      "stalled_themes": {
+        "name": "Stalled themes"
+      },
+      "attention": {
+        "name": "Attention items"
+      },
+      "quota_remaining": {
+        "name": "Quota remaining"
+      },
+      "quota_reset": {
+        "name": "Quota reset"
+      },
+      "playlist_items": {
+        "name": "{playlist} backlog"
+      },
+      "playlist_hours": {
+        "name": "{playlist} backlog hours"
+      },
+      "playlist_watched_today": {
+        "name": "{playlist} watched today"
+      },
+      "playlist_watched_7d": {
+        "name": "{playlist} watched this week"
+      },
+      "playlist_days_to_empty": {
+        "name": "{playlist} days to empty"
+      },
+      "theme_items": {
+        "name": "{theme} backlog"
+      }
     }
   }
 }

@@ -25,6 +25,7 @@ from .api import (
     YtMcpClient,
     YtMcpConnectionError,
     YtMcpError,
+    YtMcpForbiddenError,
     YtMcpNotSupportedError,
     normalize_token,
     normalize_url,
@@ -67,6 +68,8 @@ async def _validate(hass: HomeAssistant, url: str, token: str, verify_ssl: bool)
 def _error_key(err: YtMcpError) -> str:
     if isinstance(err, YtMcpAuthError):
         return "invalid_auth"
+    if isinstance(err, YtMcpForbiddenError):
+        return "forbidden"
     if isinstance(err, YtMcpNotSupportedError):
         return "not_supported"
     return "cannot_connect"

@@ -28,7 +28,9 @@ async def test_user_flow_creates_entry(hass: HomeAssistant, mock_server: Aiohttp
     assert headers["Authorization"] == f"Bearer {TOKEN}"
 
 
-@pytest.mark.parametrize(("status", "error"), [(401, "invalid_auth"), (404, "not_supported"), (502, "cannot_connect")])
+@pytest.mark.parametrize(
+    ("status", "error"), [(401, "invalid_auth"), (403, "forbidden"), (404, "not_supported"), (502, "cannot_connect")]
+)
 async def test_user_flow_errors(
     hass: HomeAssistant, aioclient_mock: AiohttpClientMocker, status_json, status: int, error: str
 ) -> None:

@@ -169,3 +169,21 @@ async def test_unload(hass: HomeAssistant, mock_server, config_entry) -> None:
     assert await hass.config_entries.async_unload(config_entry.entry_id)
     await hass.async_block_till_done()
     assert config_entry.state is ConfigEntryState.NOT_LOADED
+
+
+async def test_edge_403_is_not_a_token_problem(
+    hass: HomeAssistant, aioclient_mock: AiohttpClientMocker, status_json, stats_json, config_entry
+) -> None:
+    """A 403 from the server's edge gate makes entities unavailable but does not start a reauth."""
+    aioclient_mock.get(f"{URL}{STATUS_PATH}", json=status_json)
+    aioclient_mock.get(f"{URL}{STATS_PATH}", json=stats_json)
+    await _setup(hass, config_entry)
+    aioclient_mock.clear_requests()
+    aioclient_mock.get(f"{URL}{STATUS_PATH}", status=403, text="forbidden")
+    aioclient_mock.get(f"{URL}{STATS_PATH}", status=403, text="forbidden")
+    async_fire_time_changed(hass, dt_util.utcnow() + timedelta(minutes=16))
+    await hass.async_block_till_done()
+    assert _state(hass, "problem", "binary_sensor").state == "unavailable"
+    assert _state(hass, "backlog_items").state == "unavailable"
+    assert not [f for f in hass.config_entries.flow.async_progress() if f["context"]["source"] == "reauth"]
+    assert config_entry.state is ConfigEntryState.LOADED
